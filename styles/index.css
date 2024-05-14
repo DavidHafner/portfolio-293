@@ -1,0 +1,55 @@
+/* import font Inter from google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* remove body and html padding and margin */
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+/* Utility classes for colors to enhance consistency */
+
+@property --crayola {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #FF7538;
+}
+
+
+.bg-cream {
+    background-color: #E7EBC5;
+}
+
+.color-crayola {
+    color: var(--crayola);
+}
+
+.color-screamin-green {
+    color: #76FF7A;
+}
+
+.bg-night {
+    background-color: #111111;
+}
+
+.intro {
+    width: calc(100% - 50vw);
+    height: 100vh;
+    padding: 25vh 25vw;
+}
+
+.separator {
+    /* width: max-content; */
+    height: 2px;
+    background-color: var(--crayola);
+}
+
+.right{
+    text-align: right;
+}
+
+html{
+    font-family: "Inter", sans-serif;
+}

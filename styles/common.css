@@ -1,0 +1,201 @@
+/* import font Inter from google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+@property --crayola {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #FF7538;
+}
+
+@property --night {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #111111;
+}
+
+@property --screamin-green{
+    syntax: "<color>";
+    inherits:false;
+    initial-value: #76FF7A;
+}
+
+@property --cream{
+    syntax: "<color>";
+    inherits:false;
+    initial-value: #E7EBC5;
+}
+
+.bg-cream {
+    background-color: var(--cream);
+}
+
+.color-crayola {
+    color: var(--crayola);
+}
+
+.color-screamin-green {
+    color: var(--screamin-green);
+}
+
+.bg-night {
+    background-color: var(--night);
+}
+
+.separator-right {
+    z-index: 10;
+    border-bottom: 4px solid var(--crayola);
+    width: 125%;
+    position: relative;
+}
+
+.separator-left{
+    z-index: 10;
+    border-bottom: 4px solid var(--crayola);
+    padding-left: 25%!important;
+    width: 100%;
+    position: relative;
+    transform: translate(-25%,0);
+}
+
+.right {
+    text-align: right;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+
+nav>a {
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1.5%;
+}
+
+nav>a.selected{
+    border-bottom: 4px solid var(--screamin-green);
+}
+
+.link {
+    font-size: 4rem;
+    text-align: right;
+    text-decoration: none;
+}
+
+.link>svg{
+    margin-bottom: -1rem;
+    height: 4rem;
+}
+
+.project-left{
+    display: flex;
+    padding: 5vw;
+}
+
+.project-left>.text{
+    height: min-content;
+    margin: auto 0;
+    width: 50%;
+    padding: 0;
+    padding-right: 2vw;
+}
+
+
+
+.project-left>.text>h2{
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+}
+.project-left>.text>p{
+    margin: 0;
+    font-size: 3rem;
+}
+
+.project-left>img{
+    width: 50%;
+    aspect-ratio: 1;
+}
+
+.project-right{
+    display: flex;
+    padding: 5vw;
+}
+
+.project-right>.text{
+    height: min-content;
+    margin: auto 0;
+    width: 50%;
+    padding: 0;
+    padding-left: 2vw;
+}
+
+.project-right>.text>h2{
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+}
+.project-right>.text>p{
+    margin: 0;
+    font-size: 3rem;
+}
+
+.project-right>img{
+    width: 50%;
+    aspect-ratio: 1;
+}
+footer{
+    position: relative;
+    left: 0;
+    right: 0;
+    padding: 1.5vh 0.5vw;
+    font-size: 2rem;
+}
+footer>p{
+    margin:0;
+    width: max-content;
+    margin: 0 auto;
+    display: block;
+    font-size: 1rem;
+}
+
+footer>a{
+    width: max-content;
+    margin: 0 auto;
+    display: block;
+    text-decoration: none;
+    color:black
+}
+
+footer>a>svg{
+    width: 2rem;
+    height: 2rem;   
+}
+
+footer>div{
+    display: flex;
+    justify-content: space-between
+}
+
+.page-title{
+    text-align: center;
+    margin-top: 8vh;
+    font-size: 8rem;
+    color: var(--crayola)
+}

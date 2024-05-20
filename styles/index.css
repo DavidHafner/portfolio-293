@@ -1,55 +1,39 @@
-/* import font Inter from google fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-/* remove body and html padding and margin */
-
-body, html {
-    padding: 0;
-    margin: 0;
+.intro>div>h1{
+    font-size: 10vw;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--crayola);
+    width:max-content;
+    margin-left: auto;
+    margin-right: 0;
+    z-index: 10;
 }
 
-/* Utility classes for colors to enhance consistency */
-
-@property --crayola {
-    syntax: "<color>";
-    inherits: false;
-    initial-value: #FF7538;
+.intro>div>h2{
+    font-size: 7vw;
+    margin: auto 0;
+    z-index: 10;
 }
 
-
-.bg-cream {
-    background-color: #E7EBC5;
+.intro>div{
+    position: relative;
+    z-index: 10;
+    height: fit-content;
+    margin: auto;
 }
 
-.color-crayola {
-    color: var(--crayola);
-}
-
-.color-screamin-green {
-    color: #76FF7A;
-}
-
-.bg-night {
-    background-color: #111111;
+.intro>img{
+    width: 40vw;
+    height: calc(40vw / 778 * 959);
+    transform: translate(-10vw, 0);
+    margin: auto;
+    z-index: 0;
 }
 
 .intro {
-    width: calc(100% - 50vw);
+    width: 100%;
     height: 100vh;
-    padding: 25vh 25vw;
-}
-
-.separator {
-    /* width: max-content; */
-    height: 2px;
-    background-color: var(--crayola);
-}
-
-.right{
-    text-align: right;
-}
-
-html{
-    font-family: "Inter", sans-serif;
+    padding: 5vh 2.5vw;
+    display: flex;
+    box-sizing: border-box;
 }

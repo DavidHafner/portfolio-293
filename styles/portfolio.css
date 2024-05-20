@@ -1,0 +1,24 @@
+.page-title:has(+ .category-title){
+    margin-bottom: 0!important;
+}
+
+.category-title{
+    text-align: center;
+    margin-top: 0vh;
+    font-size: 4.5rem;
+    color: var(--screamin-green)
+}
+.project>p{
+    margin: 0 5vw;
+    font-size: 3rem;
+}
+.project>a{
+    margin: 0 5vw;
+}
+.project{
+    margin-bottom: 5vh;
+}
+.project:has(+ .category-title){
+    border-bottom: 4px solid var(--crayola);
+    padding-bottom: 5vh;
+}

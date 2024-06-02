@@ -37,3 +37,20 @@
     display: flex;
     box-sizing: border-box;
 }
+
+@media screen and (max-width: 768px) {/* Breakpoint on max Tablet size */
+    .intro{
+        flex-direction: column-reverse;
+    }
+    .intro>img{
+        width:80vw;
+        height: calc(80vw / 778 * 959);
+        transform: translate(0,0)
+    }
+    .intro>div>h1{
+        font-size: 12vw;
+    }
+    .intro>div>h2{
+        font-size: 10vw;
+    }
+}

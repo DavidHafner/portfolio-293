@@ -132,7 +132,8 @@ nav>a.selected {
 
 .project-left>img {
     width: 50%;
-    aspect-ratio: 1;
+    height: 100%;
+    margin: auto;
 }
 
 .project-right {
@@ -161,7 +162,8 @@ nav>a.selected {
 
 .project-right>img {
     width: 50%;
-    aspect-ratio: 1;
+    height: 100%;
+    margin: auto;
 }
 
 footer {
@@ -247,6 +249,16 @@ footer>div {
     margin: 0;
 }
 
+.project>p{
+    margin: 0 5vw;
+    font-size: 3rem;
+}
+.project>a{
+    margin: 0 5vw;
+}
+.project{
+    margin-bottom: 5vh;
+}
 
 @media screen and (max-width: 768px) {
     nav {
@@ -322,6 +334,10 @@ footer>div {
 
     .page-title{
         font-size: 4rem;
+    }
+
+    .project>p{
+        font-size: 1.5rem;
     }
 
 }

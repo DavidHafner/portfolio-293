@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Hafner | Home</title>
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/index.css" />
-    <script defer src="/scripts/common.js"></script>
+    <!-- preloading all subpages for faster loading times -->
+    <link rel="prefetch" href="aboutme.html" />
+    <link rel="prefetch" href="abilities.html" />
+    <link rel="prefetch" href="portfolio.html" />
+    <link rel="prefetch" href="contact.html" />
+    <script defer src="scripts/common.js"></script>
   </head>
   <body>
     <div class="burger-menu">
@@ -20,15 +25,27 @@
         <h2 class="color-screamin-green right">Lehrling</h2>
         <h2 class="color-screamin-green right">Gamer</h2>
       </div>
-      <img src="/images/me.png" alt="Bild von mir" />
+      <!-- I am using arbitrary numbers for the srcset because it is easier to implement/copy for each image -->
+      <img
+        src="images/small-me.png"
+        srcset="
+          images/small-me.png 300w,
+          images/medium-me.png 600w,
+          images/large-me.png 900w
+        "
+        sizes="(max-width: 480px ) 40vw,
+       (max-width: 768px ) 40vw,
+       40vw"
+        alt="Bild von mir"
+      />
     </div>
 
-    <nav class="bg-night">
-      <a href="/aboutme.html" class="color-screamin-green">Über mich</a>
-      <a href="/abilities.html" class="color-screamin-green">Fähigkeiten</a>
-      <a href="/" class="color-screamin-green selected">Home</a>
-      <a href="/portfolio.html" class="color-screamin-green">Portfolio</a>
-      <a href="/contact.html" class="color-screamin-green">Kontakt</a>
+    <nav class="bg-night sticky">
+      <a href="index.html" class="color-screamin-green selected">Home</a>
+      <a href="aboutme.html" class="color-screamin-green">Über mich</a>
+      <a href="abilities.html" class="color-screamin-green">Fähigkeiten</a>
+      <a href="portfolio.html" class="color-screamin-green">Portfolio</a>
+      <a href="contact.html" class="color-screamin-green">Kontakt</a>
     </nav>
     <div class="project-left">
       <div class="text">
@@ -40,7 +57,7 @@
           manuell erfassen. Ich entwickle eine Webseite, auf der Besucher ihre
           Informationen selbst eintragen können.
         </p>
-        <a href="/portfolio.html" class="color-crayola link"
+        <a href="portfolio.html" class="color-crayola link"
           >weiterlesen
           <svg
             viewBox="0 0 40 24"
@@ -54,7 +71,16 @@
           </svg>
         </a>
       </div>
-      <img src="/images/vms-checkin.png" alt="" />
+      <img src="images/small-vms-checkin.png" alt=""
+      srcset="
+          images/small-vms-checkin.png 300w,
+          images/medium-vms-checkin.png 600w,
+          images/large-vms-checkin.png 900w
+        "
+        sizes="(max-width: 480px ) 40vw,
+       (max-width: 768px ) 40vw,
+       40vw"
+      loading="lazy" />
     </div>
     <footer class="bg-cream">
       <a href="#top"

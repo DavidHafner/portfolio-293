@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Hafner | Über ich</title>
     <link rel="stylesheet" href="styles/common.css" />
-    <script defer src="/scripts/common.js"></script>
+    <!-- preloading all subpages for faster loading times -->
+    <link rel="prefetch" href="index.html" />
+    <link rel="prefetch" href="abilities.html" />
+    <link rel="prefetch" href="portfolio.html" />
+    <link rel="prefetch" href="contact.html" />
+    <script defer src="scripts/common.js"></script>
   </head>
   <body>
     <div class="burger-menu">
@@ -13,13 +18,13 @@
       <div></div>
     </div>
     <nav class="bg-night">
-      <a href="/aboutme.html" class="color-screamin-green selected"
+      <a href="index.html" class="color-screamin-green">Home</a>
+      <a href="aboutme.html" class="color-screamin-green selected"
         >Über mich</a
       >
-      <a href="/abilities.html" class="color-screamin-green">Fähigkeiten</a>
-      <a href="/" class="color-screamin-green">Home</a>
-      <a href="/portfolio.html" class="color-screamin-green">Portfolio</a>
-      <a href="/contact.html" class="color-screamin-green">Kontakt</a>
+      <a href="abilities.html" class="color-screamin-green">Fähigkeiten</a>
+      <a href="portfolio.html" class="color-screamin-green">Portfolio</a>
+      <a href="contact.html" class="color-screamin-green">Kontakt</a>
     </nav>
     <h1 class="page-title">Über mich</h1>
     <div class="project-left">
@@ -30,17 +35,40 @@
           Ich befinde mich aktuell im ersten Lehrjahr meiner Ausbildung zum
           Informatiker mit der Fachrichtung Applikationsentwicklung. Im Betrieb
           liegt der Schwerpunkt meiner Arbeit hauptsächlich auf der
-          Programmierung von Webseiten. Dabei nutze ich ein vor allem Javascript
+          Programmierung von Webseiten. Dabei nutze ich ein vor allem JavaScript
           und PHP. Ich kann auch Python, C# und C. Diese Kenntnisse ermöglichen
           es mir, vielseitige und funktionale Programme zu entwickeln und mich
           kontinuierlich in der dynamischen Welt der Informatik
           weiterzuentwickeln.
         </p>
       </div>
-      <img src="/images/sprachen.png" alt="" />
+      <img
+        src="images/sprachen.png"
+        srcset="
+          images/small-sprachen.png   300w,
+          images/medium-sprachen.png  600w,
+          images/large-sprachen.png  900w
+        "
+        sizes="(max-width: 480px ) 40vw,
+       (max-width: 768px ) 40vw,
+       40vw"
+        alt=""
+      />
     </div>
     <div class="project-right">
-      <img src="/images/skifahren.webp" alt="" />
+      <img
+        src="images/skifahren.webp"
+        alt=""
+        srcset="
+          images/small-skifahren.webp   300w,
+          images/medium-skifahren.webp  600w,
+          images/large-skifahren.webp  900w
+        "
+        sizes="(max-width: 480px ) 40vw,
+   (max-width: 768px ) 40vw,
+   40vw"
+        loading="lazy"
+      />
       <div class="text">
         <h2>Hobbies</h2>
         <div class="separator-left"></div>
@@ -63,14 +91,26 @@
           Nach Abschluss meiner Lehre plane ich, die Berufsmaturitätsschule
           (BMS) zu besuchen, um meine schulische Ausbildung weiter zu vertiefen.
           Anschliessend möchte ich einige Jahre als Informatiker arbeiten, um
-          wertvolle Berufserfahrung zu sammeln. Mein Ziel ist es, weiterhin in
-          der Informatikbranche tätig zu sein, wo ich meine Fähigkeiten und mein
-          Wissen stetig erweitern und anwenden kann. Mit meinem Engagement und
-          meinen vielseitigen Kompetenzen bin ich bestens gerüstet, um eine
-          erfolgreiche Karriere in der IT-Welt zu starten.
+          wertvolle weitere Berufserfahrung zu sammeln. Mein Ziel ist es,
+          weiterhin in der Informatikbranche tätig zu sein, wo ich meine
+          Fähigkeiten und mein Wissen stetig erweitern und anwenden kann. Mit
+          meinem Engagement und meinen vielseitigen Kompetenzen bin ich bestens
+          gerüstet, um eine erfolgreiche Karriere in der IT-Welt zu starten.
         </p>
       </div>
-      <img src="/images/zukunft.webp" alt="" />
+      <img
+        src="images/zukunft.webp"
+        alt=""
+        srcset="
+          images/small-zukunft.webp   300w,
+          images/medium-zukunft.webp  600w,
+          images/large-zukunft.webp  900w
+        "
+        sizes="(max-width: 480px ) 40vw,
+   (max-width: 768px ) 40vw,
+   40vw"
+        loading="lazy"
+      />
     </div>
     <footer class="bg-cream">
       <a href="#top">

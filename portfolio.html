@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Hafner | Portfolio</title>
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/portfolio.css" />
-    <script defer src="/scripts/common.js"></script>
+    <!-- preloading all subpages for faster loading times -->
+    <link rel="prefetch" href="aboutme.html" />
+    <link rel="prefetch" href="abilities.html" />
+    <link rel="prefetch" href="index.html" />
+    <link rel="prefetch" href="contact.html" />
+    <script defer src="scripts/common.js"></script>
   </head>
   <body>
     <div class="burger-menu">
@@ -14,13 +19,13 @@
       <div></div>
     </div>
     <nav class="bg-night">
-      <a href="/aboutme.html" class="color-screamin-green">Über mich</a>
-      <a href="/abilities.html" class="color-screamin-green">Fähigkeiten</a>
-      <a href="/" class="color-screamin-green">Home</a>
-      <a href="/portfolio.html" class="color-screamin-green selected"
+      <a href="index.html" class="color-screamin-green">Home</a>
+      <a href="aboutme.html" class="color-screamin-green">Über mich</a>
+      <a href="abilities.html" class="color-screamin-green">Fähigkeiten</a>
+      <a href="portfolio.html" class="color-screamin-green selected"
         >Portfolio</a
       >
-      <a href="/contact.html" class="color-screamin-green">Kontakt</a>
+      <a href="contact.html" class="color-screamin-green">Kontakt</a>
     </nav>
     <h1 class="page-title">Portfolio</h1>
     <h2 class="category-title">Arbeitsprojekte</h2>
@@ -30,24 +35,35 @@
           <h2>Feldschlösschen Brauwelt Check In</h2>
           <div class="separator-right"></div>
           <p>
-            Wenn man die Feldschlösschen Brauwelt besucht, muss man sich
-            anmelden. Bis jetzt muss vor Ort ein Mitarbeiter alle Informationen
-            eintragen. Ich erstelle eine Seite, auf der man die Informationen
-            selber eintragen kann.
+            Wer die Feldschlösschen Brauwelt besucht, muss sich anmelden. Bisher
+            war ein Mitarbeiter vor Ort der die Informationen manuell erfasste.
+            Ich entwickle eine Webseite, auf der Besucher ihre Informationen
+            selbst eintragen können.
           </p>
         </div>
-        <img src="/images/vms-checkin.png" id="vms" />
+        <img
+          src="images/vms-checkin.png"
+          srcset="
+            images/small-vms-checkin.png  300w,
+            images/medium-vms-checkin.png 600w,
+            images/large-vms-checkin.png  900w
+          "
+          sizes="(max-width: 480px ) 40vw,
+     (max-width: 768px ) 40vw,
+     40vw"
+          alt="screenshot des Projektes"
+        />
       </div>
       <p>
         Auf der Anmeldeseite kann man zunächst auswählen, welches der vier
-        Produkte man möchte. Zuerst muss jedoch angegeben werden, ob man eine
-        Gruppe ist und wie gross diese ist. Anschliessend gibt man die eigene
-        E-Mail-Adresse ein, mit der überprüft wird, ob man bereits Kunde ist.
-        Danach kann man bestätigen, ob man die gefundene Person ist. Im nächsten
-        Schritt gibt man die Informationen aller Gruppenmitglieder an. Zum
-        Schluss kann man das ausgewählte Produkt und den Gesamtpreis überprüfen.
-        Nach der Bestätigung erhält man eine Nummer, mit der man an der Kasse
-        bezahlen kann.
+        Produkte man möchte. Zuerst muss angegeben werden, ob man eine Gruppe
+        ist und wie gross diese ist. Anschliessend gibt der Kunde die eigene
+        E-Mail-Adresse ein, mit der überprüft wird, ob man bereits registriert
+        ist. Ist die Adresse bereits erfasst, bestätigt der Kunde ob er die
+        gefundene Person ist. Im nächsten Schritt gibt man die Adresse und das
+        Alter aller Gruppenmitglieder an. Zum Schluss überprüft der Kunde das
+        ausgewählte Produkt und den Gesamtpreis. Nach der Bestätigung erhält man
+        eine Nummer, mit der an der Kasse bezahlt werden kann.
       </p>
       <a
         href="https://github.com/tingo-gmbh/vms-check-in"
@@ -63,7 +79,19 @@
     </div>
     <div class="project">
       <div class="project-right">
-        <img src="/images/brb-poi-finder.png" id="brb"/>
+        <img
+          src="images/brb-poi-finder.png"
+          alt="screenshot des Projektes"
+          srcset="
+            images/small-brb-poi-finder.png  300w,
+            images/medium-brb-poi-finder.png 600w,
+            images/large-brb-poi-finder.png  900w
+          "
+          sizes="(max-width: 480px ) 40vw,
+     (max-width: 768px ) 40vw,
+     40vw"
+          loading="lazy"
+        />
         <div class="text">
           <h2>Rothorn POI Finder</h2>
           <div class="separator-left"></div>
@@ -106,7 +134,19 @@
             dafür zu programmieren.
           </p>
         </div>
-        <img src="/images/spotify.png"/>
+        <img
+          src="images/spotify.png"
+          srcset="
+            images/small-spotify.png  300w,
+            images/medium-spotify.png 600w,
+            images/large-spotify.png  900w
+          "
+          sizes="(max-width: 480px ) 40vw,
+     (max-width: 768px ) 40vw,
+     40vw"
+          alt="Konzept des Overlays"
+          loading="lazy"
+        />
       </div>
       <p>
         Mein selbst entwickeltes Spotify-Overlay zeigt den aktuellen Song, die
@@ -129,7 +169,19 @@
     </div>
     <div class="project">
       <div class="project-right">
-        <img src="/images/webserver.png" />
+        <img
+          src="images/webserver.png"
+          alt="Screenshot meines Codes"
+          srcset="
+            images/small-webserver.png  300w,
+            images/medium-webserver.png 600w,
+            images/large-webserver.png  900w
+          "
+          sizes="(max-width: 480px ) 40vw,
+     (max-width: 768px ) 40vw,
+     40vw"
+          loading="lazy"
+        />
         <div class="text">
           <h2>Webserver</h2>
           <div class="separator-left"></div>
@@ -137,7 +189,9 @@
             Ich habe einen eigenen PHP-Webserver erstellt, der HTML-Seiten
             anzeigen und andere Dateien hosten kann. Dabei habe ich ein
             flexibles System entwickelt, das es ermöglicht, Routen unabhängig
-            vom tatsächlichen Dateipfad zu definieren.
+            vom tatsächlichen Dateipfad zu definieren. Der Server ist auch
+            einfach zu benutzen und ist mit allen php und htaccess fähigen
+            Webeserver kompatibel.
           </p>
         </div>
       </div>

@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Hafner | Fähigkeiten</title>
     <link rel="stylesheet" href="styles/common.css" />
-    <script defer src="/scripts/common.js"></script>
+    <!-- preloading all subpages for faster loading times -->
+    <link rel="prefetch" href="aboutme.html" />
+    <link rel="prefetch" href="index.html" />
+    <link rel="prefetch" href="portfolio.html" />
+    <link rel="prefetch" href="contact.html" />
+    <script defer src="scripts/common.js"></script>
   </head>
   <body>
     <div class="burger-menu">
@@ -13,13 +18,13 @@
       <div></div>
     </div>
     <nav class="bg-night">
-      <a href="/aboutme.html" class="color-screamin-green">Über mich</a>
-      <a href="/abilities.html" class="color-screamin-green selected"
+      <a href="index.html" class="color-screamin-green">Home</a>
+      <a href="aboutme.html" class="color-screamin-green">Über mich</a>
+      <a href="abilities.html" class="color-screamin-green selected"
         >Fähigkeiten</a
       >
-      <a href="/" class="color-screamin-green">Home</a>
-      <a href="/portfolio.html" class="color-screamin-green">Portfolio</a>
-      <a href="/contact.html" class="color-screamin-green">Kontakt</a>
+      <a href="portfolio.html" class="color-screamin-green">Portfolio</a>
+      <a href="contact.html" class="color-screamin-green">Kontakt</a>
     </nav>
     <h1 class="page-title">Fähigkeiten</h1>
     <div class="project">
@@ -29,8 +34,8 @@
           <div class="separator-right"></div>
           <p>
             In meiner Freizeit programmiere ich oft auch eigene Projekte.
-            Meistens benutze ich dazu JavaScript. Javascript ermöglicht es mir, schnell
-            und effizient Webanwendungen und kleine Tools zu erstellen.
+            Meistens benutze ich dazu JavaScript. JavaScript ermöglicht es mir,
+            schnell und effizient Webanwendungen und kleine Tools zu erstellen.
           </p>
           <a href="" class="color-crayola link"
             >Projekte
@@ -46,7 +51,18 @@
             </svg>
           </a>
         </div>
-        <img src="/images/developer.png" alt="" />
+        <img
+          src="images/developer.png"
+          srcset="
+            images/small-developer.png   300w,
+            images/medium-developer.png  600w,
+            images/large-developer.png  900w
+          "
+          sizes="(max-width: 480px ) 40vw,
+     (max-width: 768px ) 40vw,
+     40vw"
+          alt=""
+        />
       </div>
       <p>
         Gelegentlich greife ich auch auf Python zurück, insbesondere wenn es um
@@ -60,15 +76,27 @@
     </div>
     <div class="project">
       <div class="project-right">
-        <img src="/images/lehrling.png" alt="" />
+        <img
+          src="images/lehrling.png"
+          alt=""
+          srcset="
+            images/small-lehrling.png   300w,
+            images/medium-lehrling.png  600w,
+            images/large-lehrling.png  900w
+          "
+          sizes="(max-width: 480px ) 40vw,
+     (max-width: 768px ) 40vw,
+     40vw"
+          loading="lazy"
+        />
         <div class="text">
           <h2>Lehrling</h2>
           <div class="separator-left"></div>
           <p>
-            Ich habe die Berufsmaturitätsschule (BMS) begonnen, jedoch nach einem
-            Semester festgestellt, dass der Stress für mich zu hoch war. Daher
-            habe ich mich entschieden, die BMS abzubrechen und stattdessen die
-            reguläre Berufsschule zu besuchen. Dort habe ich nun Fächer wie
+            Ich habe die Berufsmaturitätsschule (BMS) begonnen, jedoch nach
+            einem Semester festgestellt, dass der Stress für mich zu hoch war.
+            Daher habe ich mich entschieden, die BMS abzubrechen und stattdessen
+            die reguläre Berufsschule zu besuchen. Dort habe ich nun Fächer wie
             Allgemeinbildung, Englisch, Mathematik und Sport.Zusätzlich belege
             ich berufsspezifische Fächer. Momentan nehme ich an einem Modul zum
             Thema Webprogrammierung teil. Im Rahmen dieses Moduls soll ich eine
@@ -93,7 +121,7 @@
           stellen. So kann ich auch nach einem langen Arbeitstag abschalten.
         </p>
       </div>
-      <img src="/images/placeholder.png" alt="" />
+      <video src="images/gaming_video_1.mov" controls loading="lazy"></video>
     </div>
     <footer class="bg-cream">
       <a href="#top"

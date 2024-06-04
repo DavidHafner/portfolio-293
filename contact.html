@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Hafner | Home</title>
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/contact.css" />
-    <script src="/scripts/contact.js" defer></script>
-    <script defer src="/scripts/common.js"></script>
+    <!-- preloading all subpages for faster loading times -->
+    <link rel="prefetch" href="aboutme.html">
+    <link rel="prefetch" href="abilities.html">
+    <link rel="prefetch" href="portfolio.html">
+    <link rel="prefetch" href="index.html">
+    <script src="scripts/contact.js" defer></script>
+    <script src="scripts/common.js" defer></script>
   </head>
   <body>
     <div class="burger-menu">
@@ -15,11 +20,11 @@
       <div></div>
     </div>
     <nav class="bg-night">
-      <a href="/aboutme.html" class="color-screamin-green">Über mich</a>
-      <a href="/abilities.html" class="color-screamin-green">Fähigkeiten</a>
-      <a href="/" class="color-screamin-green">Home</a>
-      <a href="/portfolio.html" class="color-screamin-green">Portfolio</a>
-      <a href="/contact.html" class="color-screamin-green selected">Kontakt</a>
+      <a href="index.html" class="color-screamin-green">Home</a>
+      <a href="aboutme.html" class="color-screamin-green">Über mich</a>
+      <a href="abilities.html" class="color-screamin-green">Fähigkeiten</a>
+      <a href="portfolio.html" class="color-screamin-green">Portfolio</a>
+      <a href="contact.html" class="color-screamin-green selected">Kontakt</a>
     </nav>
     <h1 class="page-title">Kontakt</h1>
     <div class="social-media">
@@ -35,7 +40,7 @@
           <input type="email" placeholder="Email" required/>
           <input type="text" placeholder="Betreff" required/>
         </div>
-        <textarea type="text" class="contact-right" placeholder="Nachricht" required></textarea>
+        <textarea class="contact-right" placeholder="Nachricht" required></textarea>
       </div>
       <button type="submit" class="submit-btn">Submit</button> <!-- I added a submit button, which I forgot in my mockup -->
     </form>
